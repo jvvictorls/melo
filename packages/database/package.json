@@ -9,14 +9,14 @@
       "default": "./dist/index.js"
     }
   },
- "scripts": {
-  "build": "prisma generate && tsc",
-  "db:generate": "prisma generate",
-  "db:migrate": "prisma migrate dev",
-  "db:migrate:deploy": "prisma migrate deploy",
-  "db:seed": "prisma db seed",
-  "db:reset": "prisma migrate reset"
-},
+  "scripts": {
+    "build": "prisma generate && tsc",
+    "db:generate": "prisma generate",
+    "db:migrate": "prisma migrate dev",
+    "db:migrate:deploy": "prisma migrate deploy",
+    "db:seed": "prisma db seed",
+    "db:reset": "prisma migrate reset"
+  },
   "devDependencies": {
     "@types/bcrypt": "^6.0.0",
     "@types/node": "^26.4.1",

@@ -1,2 +1,2 @@
 export * from "./generated/client.js";
-export * from "../src/clients.js";
+export * from "./clients.js";
