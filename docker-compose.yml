@@ -16,7 +16,7 @@ services:
     build:
       context: .
       dockerfile: docker/api.Dockerfile
-    command: sh -c "npm run db:migrate:deploy --workspace=@repo/db && npm run dev --workspace=api"
+    command: sh -c "npm run build --workspace=@repo/db && npm run db:migrate:deploy --workspace=@repo/db && npm run db:seed --workspace=@repo/db && npm run dev --workspace=api"    
     ports:
       - "3001:3001"
     volumes:
@@ -24,6 +24,7 @@ services:
       - ./packages:/app/packages
     environment:
       NODE_ENV: development
+      DATABASE_URL: postgresql://postgres:postgres@postgres:5432/melo
     depends_on:
       postgres:
         condition: service_healthy
